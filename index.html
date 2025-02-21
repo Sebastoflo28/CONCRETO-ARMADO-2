@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Área de Acero</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Área de Acero</h2>
+        <label for="fy">fy (kgf/cm²):</label>
+        <input type="number" id="fy" placeholder="Ingrese fy">
+        
+        <label for="fc">f’c (kgf/cm²):</label>
+        <input type="number" id="fc" placeholder="Ingrese f'c">
+        
+        <label for="b">b (cm):</label>
+        <input type="number" id="b" placeholder="Ingrese b">
+        
+        <label for="d">d (cm):</label>
+        <input type="number" id="d" placeholder="Ingrese d">
+        
+        <label for="mu">Mu (kgf.cm):</label>
+        <input type="number" id="mu" placeholder="Ingrese Mu">
+        
+        <button onclick="calcularAcero()">Calcular Área de Acero</button>
+        <h3>Resultado: <span id="resultado"></span></h3>
+    </div>
+
+    <script>
+        function calcularAcero() {
+            let fy = parseFloat(document.getElementById('fy').value);
+            let fc = parseFloat(document.getElementById('fc').value);
+            let b = parseFloat(document.getElementById('b
